@@ -8,5 +8,6 @@ import {timeout} from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- isVisible = true
+e:number = Math.E ;
+str:string = 'hello world'
 }

@@ -1,16 +1,7 @@
 <div class="container">
-  <h1>angular directives</h1>
-  <p appStyle = "red"
-     [dStyles]="{border : '1px solid blue', borderRadius: '5px', fontWeight:'bold'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laboriosam!</p>
-  <p appStyle = "blue"
-     [dStyles]="{border : '1px solid blue', borderRadius: '5px', fontWeight:'bold'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laboriosam!</p>
-  <button class="btn" (click)="isVisible=!isVisible"> toggle </button>
-<!--  <div *ngIf="isVisible" class="wrap">-->
-<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti et excepturi fugit iure necessitatibus nihil ratione rem repellendus voluptates!</p>-->
-<!--  </div>-->
-
-  <div class="wrap" *appIfnot="!isVisible">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti et excepturi fugit iure necessitatibus nihil ratione rem repellendus voluptates!</p>
-  </div>
-
+  <h1>angular pipes</h1>
+  <p>{{e | number: '1.0-0'}}</p>
+  <hr/>
+  <p>{{str | uppercase | lowercase | titlecase}}</p>
+<p>{{str | titlecase | slice: 1 :-2 }} </p>
 </div>
