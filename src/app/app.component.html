@@ -1,24 +1,16 @@
 <div class="container">
-  <h1>Components</h1>
-  <h2>subheader</h2>
+  <h1>angular directives</h1>
+  <p appStyle = "red"
+     [dStyles]="{border : '1px solid blue', borderRadius: '5px', fontWeight:'bold'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laboriosam!</p>
+  <p appStyle = "blue"
+     [dStyles]="{border : '1px solid blue', borderRadius: '5px', fontWeight:'bold'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, laboriosam!</p>
+  <button class="btn" (click)="isVisible=!isVisible"> toggle </button>
+<!--  <div *ngIf="isVisible" class="wrap">-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti et excepturi fugit iure necessitatibus nihil ratione rem repellendus voluptates!</p>-->
+<!--  </div>-->
 
-<app-post-form
-  (onAdd)="updatePosts($event)"
-
-></app-post-form>
-  <hr/>
-  <app-post
-    *ngFor="let p of posts"
-  [post]="p"
-    (onRemove)="removePost($event)"
-
-  >
-    <div #info>
-    <small *ngIf="p.text.length>10; else short" > post big</small>
-    <ng-template #short>
-      <small>post small</small> </ng-template>
-    </div>
-  </app-post>
-
+  <div class="wrap" *appIfnot="!isVisible">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus deleniti et excepturi fugit iure necessitatibus nihil ratione rem repellendus voluptates!</p>
+  </div>
 
 </div>
