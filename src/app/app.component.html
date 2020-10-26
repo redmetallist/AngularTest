@@ -1,7 +1,12 @@
 <div class="container">
   <h1>angular pipes</h1>
-  <p>{{e | number: '1.0-0'}}</p>
-  <hr/>
-  <p>{{str | uppercase | lowercase | titlecase}}</p>
-<p>{{str | titlecase | slice: 1 :-2 }} </p>
+  <button class="btn" (click)="searchField ='title'">title</button>
+  <button class="btn" (click)="searchField ='text'">text</button>
+  <input type="text" [(ngModel)]="search" >
+  <div
+  *ngFor="let post of posts |filter: search:searchField" class="card">
+    <h2>{{post.title}}</h2>
+    <p>{{post.text}}</p>
+  </div>
+
 </div>
